@@ -26,3 +26,8 @@ export interface OddsItem {
   label: string;
   value: number; // 0-100
 }
+
+export interface Analysis {
+  generatedAt: string;
+  analysis: string | null;
+}

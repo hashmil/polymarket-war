@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "fetch": "bun scripts/fetch.ts",
-    "update": "bun scripts/fetch.ts && git add data/ && git commit -m 'odds update' && git push"
+    "analyze": "bun scripts/analyze.ts",
+    "update": "bun scripts/fetch.ts && bun scripts/analyze.ts && git add data/ && git commit -m 'odds update' && git push"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.2",

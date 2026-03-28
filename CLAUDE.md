@@ -1,106 +1,44 @@
+# Polymarket Iran War Tracker
 
-Default to using Bun instead of Node.js.
+## Overview
+Static site showing live Polymarket prediction market odds on the Iran conflict. Built with Vite + React + Tailwind CSS v4. Data fetched via Bun script, AI analysis generated via `claude -p` CLI.
 
-- Use `bun <file>` instead of `node <file>` or `ts-node <file>`
-- Use `bun test` instead of `jest` or `vitest`
-- Use `bun build <file.html|file.ts|file.css>` instead of `webpack` or `esbuild`
-- Use `bun install` instead of `npm install` or `yarn install` or `pnpm install`
-- Use `bun run <script>` instead of `npm run <script>` or `yarn run <script>` or `pnpm run <script>`
-- Use `bunx <package> <command>` instead of `npx <package> <command>`
-- Bun automatically loads .env, so don't use dotenv.
+## Tech Stack
+- **Runtime**: Bun (not Node.js)
+- **Build**: Vite + React 19 + Tailwind CSS v4
+- **Charts**: Recharts (lazy-loaded in dashboard)
+- **Data**: Polymarket Gamma API (`https://gamma-api.polymarket.com`)
+- **AI Analysis**: Claude Code CLI (`claude -p`)
+- **Deploy**: Cloudflare Pages (static, build command: `bun run build`, output: `dist/`)
 
-## APIs
-
-- `Bun.serve()` supports WebSockets, HTTPS, and routes. Don't use `express`.
-- `bun:sqlite` for SQLite. Don't use `better-sqlite3`.
-- `Bun.redis` for Redis. Don't use `ioredis`.
-- `Bun.sql` for Postgres. Don't use `pg` or `postgres.js`.
-- `WebSocket` is built-in. Don't use `ws`.
-- Prefer `Bun.file` over `node:fs`'s readFile/writeFile
-- Bun.$`ls` instead of execa.
-
-## Testing
-
-Use `bun test` to run tests.
-
-```ts#index.test.ts
-import { test, expect } from "bun:test";
-
-test("hello world", () => {
-  expect(1).toBe(1);
-});
-```
-
-## Frontend
-
-Use HTML imports with `Bun.serve()`. Don't use `vite`. HTML imports fully support React, CSS, Tailwind.
-
-Server:
-
-```ts#index.ts
-import index from "./index.html"
-
-Bun.serve({
-  routes: {
-    "/": index,
-    "/api/users/:id": {
-      GET: (req) => {
-        return new Response(JSON.stringify({ id: req.params.id }));
-      },
-    },
-  },
-  // optional websocket support
-  websocket: {
-    open: (ws) => {
-      ws.send("Hello, world!");
-    },
-    message: (ws, message) => {
-      ws.send(message);
-    },
-    close: (ws) => {
-      // handle close
-    }
-  },
-  development: {
-    hmr: true,
-    console: true,
-  }
-})
-```
-
-HTML files can import .tsx, .jsx or .js files directly and Bun's bundler will transpile & bundle automatically. `<link>` tags can point to stylesheets and Bun's CSS bundler will bundle.
-
-```html#index.html
-<html>
-  <body>
-    <h1>Hello, world!</h1>
-    <script type="module" src="./frontend.tsx"></script>
-  </body>
-</html>
-```
-
-With the following `frontend.tsx`:
-
-```tsx#frontend.tsx
-import React from "react";
-import { createRoot } from "react-dom/client";
-
-// import .css files directly and it works
-import './index.css';
-
-const root = createRoot(document.body);
-
-export default function Frontend() {
-  return <h1>Hello, world!</h1>;
-}
-
-root.render(<Frontend />);
-```
-
-Then, run index.ts
-
+## Commands
 ```sh
-bun --hot ./index.ts
+bun run dev        # Dev server (port 3000 for dev.4hm.uk reverse proxy)
+bun run build      # Production build → dist/
+bun run fetch      # Fetch latest Polymarket odds → data/latest.json
+bun run analyze    # Generate AI analysis via claude CLI → data/analysis.json
+bun run update     # fetch + analyze + git commit + push
 ```
 
-For more information, read the Bun API docs in `node_modules/bun-types/docs/**.mdx`.
+## Architecture
+- `scripts/fetch.ts` — Fetches Polymarket Gamma API, saves to `data/latest.json` + `data/snapshots/`
+- `scripts/analyze.ts` — Runs `claude -p` with market data to generate analysis
+- `src/views/ReportView.tsx` — Shareable report (420px, mobile-first, WhatsApp-friendly)
+- `src/views/DashboardView.tsx` — Full dashboard with charts, tables, history (lazy-loaded)
+- `src/data/loader.ts` — Imports JSON data at build time via `import.meta.glob`
+- `src/data/helpers.ts` — `yesPct()` extracts "Yes" probability from market data
+
+## Key Data Details
+- Polymarket `outcomePrices` is a JSON string that needs `JSON.parse()`
+- Outcomes order is `["Yes", "No"]` — index 0 is the "Yes" price
+- Resolved markets (prices `[0,1]` or `[1,0]`) are filtered out
+- Event slugs: `us-x-iran-ceasefire-by`, `military-action-against-iran-ends-on`, `iran-x-israelus-conflict-ends-by`
+
+## Routing
+- `/` — Report view (shareable)
+- `/dashboard` — Dashboard view
+- SPA routing via `public/_redirects` for Cloudflare Pages
+
+## GitHub
+- Repo: hashmil/polymarket-war (public)
+- Cloudflare Pages connected

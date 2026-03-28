@@ -1,7 +1,8 @@
-import type { Snapshot } from "../types.ts";
+import type { Analysis, Snapshot } from "../types.ts";
 
 // Latest data (overwritten each fetch)
 import latestData from "../../data/latest.json";
+import analysisData from "../../data/analysis.json";
 
 // All historical snapshots
 const snapshotModules = import.meta.glob<Snapshot>("../../data/snapshots/*.json", {
@@ -11,6 +12,10 @@ const snapshotModules = import.meta.glob<Snapshot>("../../data/snapshots/*.json"
 
 export function getLatest(): Snapshot {
   return latestData as unknown as Snapshot;
+}
+
+export function getAnalysis(): Analysis {
+  return analysisData as unknown as Analysis;
 }
 
 export function getSnapshots(): { date: string; snapshot: Snapshot }[] {

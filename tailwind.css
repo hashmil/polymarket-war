@@ -7,6 +7,7 @@
   --color-bg: #0d1117;
   --color-bg-card: #161b22;
   --color-bg-header: #1a1e2e;
+  --color-bg-elevated: #1c2129;
   --color-border: #30363d;
   --color-border-subtle: #21262d;
 
@@ -17,8 +18,90 @@
   --color-text-secondary: #c9d1d9;
 
   --color-accent: #f0883e;
+  --color-accent-dim: rgba(240, 136, 62, 0.12);
   --color-green: #3fb950;
+  --color-green-dim: rgba(63, 185, 80, 0.12);
   --color-yellow: #d29922;
+  --color-yellow-dim: rgba(210, 153, 34, 0.12);
   --color-red: #f85149;
+  --color-red-dim: rgba(248, 81, 73, 0.12);
   --color-red-dark: #da3633;
+
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-slide-up: slide-up 0.4s ease-out both;
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  animation: slide-up 0.4s ease-out both;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 360ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 420ms; }
+.stagger-children > *:nth-child(9) { animation-delay: 480ms; }
+.stagger-children > *:nth-child(10) { animation-delay: 540ms; }
+
+/* Noise texture overlay */
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* Odds bar background */
+.odds-bar {
+  position: relative;
+  overflow: hidden;
+}
+.odds-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--bar-width, 0%);
+  opacity: 0.06;
+  border-radius: inherit;
+  transition: width 0.8s ease-out;
+}
+.odds-bar[data-color="green"]::after { background: #3fb950; }
+.odds-bar[data-color="yellow"]::after { background: #d29922; }
+.odds-bar[data-color="red"]::after { background: #f85149; }
+
+/* Selection color */
+::selection {
+  background: rgba(240, 136, 62, 0.3);
+  color: #f0f6fc;
 }
