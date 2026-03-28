@@ -153,12 +153,16 @@ export function ReportView() {
 
           {/* Footer */}
           <div className="px-5 sm:px-6 py-4 flex items-center justify-between">
-            <Link
-              to="/dashboard"
-              className="text-[11px] text-accent hover:text-accent/80 font-mono transition-colors group"
-            >
-              Dashboard <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
-            </Link>
+            {import.meta.env.DEV ? (
+              <Link
+                to="/dashboard"
+                className="text-[11px] text-accent hover:text-accent/80 font-mono transition-colors group"
+              >
+                Dashboard <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
+              </Link>
+            ) : (
+              <span />
+            )}
             <span className="text-[10px] text-text-dim font-mono">
               Sources: Polymarket · {fetchDate}
             </span>

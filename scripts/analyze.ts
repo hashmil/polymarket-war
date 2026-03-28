@@ -75,7 +75,12 @@ Write 4-6 concise bullet points. Each bullet should be 1-2 sentences. Cover:
 - Cross-reference with other sources if possible (Metaculus, analyst views, news)
 - Brief outlook
 
-Format each bullet starting with "• ". Be direct and analytical. No hedging or speculation disclaimers. Write like a Bloomberg terminal note.`;
+CRITICAL FORMAT RULES:
+- Start each bullet with "• " (bullet character + space)
+- Output ONLY the bullet points — no title, no headline, no preamble, no "Here's..." intro
+- Do NOT use markdown headers or bold titles before the bullets
+- After the bullets, add a blank line then "Sources:" followed by source links as "- [title](url)"
+- Be direct and analytical. Write like a Bloomberg terminal note.`;
 
   console.log("Running AI analysis via claude CLI...");
 

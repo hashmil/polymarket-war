@@ -65,10 +65,10 @@ export function AnalysisBox({ analysis, generatedAt }: Props) {
   const contentLines = sourcesIdx >= 0 ? lines.slice(0, sourcesIdx) : lines;
   const sourceLines = sourcesIdx >= 0 ? lines.slice(sourcesIdx + 1) : [];
 
-  // Extract bullet points only
-  const bullets = contentLines.filter(
-    (l) => l.startsWith("•") || l.startsWith("-") || l.startsWith("*")
-  );
+  // Extract bullet points only (• or "- " but not "**bold**" lines)
+  const isBullet = (l: string) =>
+    l.startsWith("• ") || l.startsWith("- ") || l.startsWith("* ");
+  const bullets = contentLines.filter(isBullet);
   const displayLines = bullets.length > 0 ? bullets : contentLines;
 
   return (
