@@ -1,0 +1,399 @@
+{
+  "fetchedAt": "2026-03-28T06:26:31.929Z",
+  "events": [
+    {
+      "slug": "us-x-iran-ceasefire-by",
+      "title": "US x Iran ceasefire by...?",
+      "markets": [
+        {
+          "question": "US x Iran ceasefire by March 31?",
+          "slug": "us-x-iran-ceasefire-by-march-31",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.0285,
+            0.9715
+          ],
+          "volume": 35658388.37170194,
+          "liquidity": 522909.13733,
+          "clobTokenIds": [
+            "5708561660601459805512817131601230493971589760294984590237789749933853841330",
+            "51938013536033607392847872760095315790110510345353215258271180769721415981927"
+          ],
+          "conditionId": "0x3c6bcb7da14ea576e5af25547dbd96f2bb24ac34e748e76aecff2ee9195dd1ac",
+          "groupItemTitle": "March 31"
+        },
+        {
+          "question": "US x Iran ceasefire by April 30?",
+          "slug": "us-x-iran-ceasefire-by-april-30-194-679-389",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.395,
+            0.605
+          ],
+          "volume": 6151730.132847053,
+          "liquidity": 195054.8506,
+          "clobTokenIds": [
+            "44149007410374101286260953227333745102128417138356632089802983317837574022801",
+            "52284848830940446862370529859386043059769275594386884690262695607365719243018"
+          ],
+          "conditionId": "0x80059ff4e694f878c0498f6f3a067ee7ca62dc2fc46251a4287b58355ce47bc5",
+          "groupItemTitle": "April 30"
+        },
+        {
+          "question": "US x Iran ceasefire by December 31?",
+          "slug": "us-x-iran-ceasefire-by-december-31-969-392",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.755,
+            0.245
+          ],
+          "volume": 460818.66520099936,
+          "liquidity": 153274.6383,
+          "endDate": "2026-12-31T00:00:00Z",
+          "clobTokenIds": [
+            "8128945458646698903806569632554420186698498029234030899768687922863618111402",
+            "56747118227334252583511882180251579619525123181561585731533380533045271258105"
+          ],
+          "conditionId": "0x4ccff8c606ad71080c7611d28f1593a528a8ca6c11c1fb63bfa24a7eb2ad30d7",
+          "groupItemTitle": "December 31"
+        },
+        {
+          "question": "US x Iran ceasefire by June 30?",
+          "slug": "us-x-iran-ceasefire-by-june-30-752-741-257",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.615,
+            0.385
+          ],
+          "volume": 2218311.4922239888,
+          "liquidity": 152461.2363,
+          "endDate": "2026-06-30T00:00:00Z",
+          "clobTokenIds": [
+            "91234452361450605263734013436205650165110345459845371466629272470861583403438",
+            "11578806222441353507719115176638735578970248989819859302635595162497755626384"
+          ],
+          "conditionId": "0x81b06cb917c9a2aabc67a7765bc3c640e88a699bbf451b29915049c0766cde04",
+          "groupItemTitle": "June 30"
+        },
+        {
+          "question": "US x Iran ceasefire by May 31?",
+          "slug": "us-x-iran-ceasefire-by-may-31-313-373-916",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.535,
+            0.465
+          ],
+          "volume": 2164576.8887179988,
+          "liquidity": 129616.666,
+          "endDate": "2026-05-31T00:00:00Z",
+          "clobTokenIds": [
+            "97390751868769233430161550786035197721004217118584051662030655361575807718008",
+            "35501529638864997295617415678543053873295823444029641313951781455412631628785"
+          ],
+          "conditionId": "0xa9937410f8aae98cc6440a7480ad832be5a1a998afcf5a6e77c6f5aa4c0f259f",
+          "groupItemTitle": "May 31"
+        },
+        {
+          "question": "US x Iran ceasefire by April 15?",
+          "slug": "us-x-iran-ceasefire-by-april-15-182-528-637",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.225,
+            0.775
+          ],
+          "volume": 5477212.185426748,
+          "liquidity": 97528.0265,
+          "endDate": "2026-04-15T00:00:00Z",
+          "clobTokenIds": [
+            "85191934649046129480174964255278880752271767733539167443243111973456166096127",
+            "8442709013751543525223072638303914942960068246422295030411662679470140144155"
+          ],
+          "conditionId": "0x773abaa5fe55e5cde51a261f444b7921652a4e059ead6b3be9fe56499c2d4609",
+          "groupItemTitle": "April 15"
+        },
+        {
+          "question": "US x Iran ceasefire by April 7?",
+          "slug": "us-x-iran-ceasefire-by-april-7-278",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.125,
+            0.875
+          ],
+          "volume": 893480.6042560003,
+          "liquidity": 108742.31,
+          "endDate": "2026-04-07T00:00:00Z",
+          "clobTokenIds": [
+            "82855088893985825781350466813737280564000275725006328179621744619327480699369",
+            "55194745453074297560900438908357749978780021444937743754846798173575377021411"
+          ],
+          "conditionId": "0x4c5701bcde0b8fb7d7f48c8e9d20245a6caa58c61a77f981fad98f2bfa0b1bc7",
+          "groupItemTitle": "April 7"
+        }
+      ]
+    },
+    {
+      "slug": "military-action-against-iran-ends-on",
+      "title": "Military action against Iran ends on...?",
+      "markets": [
+        {
+          "question": "Military action against Iran ends on March 31, 2026?",
+          "slug": "military-action-against-iran-ends-on-march-31-2026",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.0215,
+            0.9785
+          ],
+          "volume": 371078.4775630006,
+          "liquidity": 26677.66041,
+          "endDate": "2026-03-31T00:00:00Z",
+          "clobTokenIds": [
+            "84197343570735872148569090696309274228245499063488257095084651010365231404024",
+            "55841239349448306497866308893071639263370393355386977038409897233843531058850"
+          ],
+          "conditionId": "0xfaa44c87fc51f53bb6d403662d1ce0915228d06419567d4808e48013abfcc616",
+          "groupItemTitle": "March 31"
+        },
+        {
+          "question": "Military action against Iran ends on March 29, 2026?",
+          "slug": "military-action-against-iran-ends-on-march-29-2026",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.005,
+            0.995
+          ],
+          "volume": 285442.9476849994,
+          "liquidity": 14115.35083,
+          "endDate": "2026-03-31T00:00:00Z",
+          "clobTokenIds": [
+            "96691839854699648811903727671647254545702793916350123005618223697766599166551",
+            "39218325415432615500086425405247840800124166182306396521684891391393590008507"
+          ],
+          "conditionId": "0x6c2309a5ed9de0a2539f0503c2671aec57315e6d125280ea1a3b4a33c4cbd4d5",
+          "groupItemTitle": "March 29"
+        },
+        {
+          "question": "Military action against Iran ends on March 30, 2026?",
+          "slug": "military-action-against-iran-ends-on-march-30-2026",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.008,
+            0.992
+          ],
+          "volume": 282261.67248399963,
+          "liquidity": 16994.98314,
+          "endDate": "2026-03-31T00:00:00Z",
+          "clobTokenIds": [
+            "13938641740167232782179639120288822367279054920963999129857123782296238840735",
+            "70890431850886212341747674009914919624558711254615444894196803326685820183850"
+          ],
+          "conditionId": "0xdc15de44696cde71776edb36ac57c3609acf99dadeb65c7ba422701c35820e63",
+          "groupItemTitle": "March 30"
+        },
+        {
+          "question": "Military action against Iran continues through March 31, 2026?",
+          "slug": "military-action-against-iran-continues-through-march-31-2026",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.945,
+            0.055
+          ],
+          "volume": 568237.6653120015,
+          "liquidity": 41506.956,
+          "endDate": "2026-03-31T00:00:00Z",
+          "clobTokenIds": [
+            "114452833153478251477218824496014511060529663635261152708245153427039308185854",
+            "27040294992035591963997512090547410933796078166803169197205456299936506956431"
+          ],
+          "conditionId": "0xc4170a15840e61b89216fcdf6368f63486b51f037e5c0546d63ae75b14fa5c2a",
+          "groupItemTitle": "Military action through March 31"
+        }
+      ]
+    },
+    {
+      "slug": "iran-x-israelus-conflict-ends-by",
+      "title": "Iran x Israel/US conflict ends by...?",
+      "markets": [
+        {
+          "question": "Iran x Israel/US conflict ends by March 31?",
+          "slug": "iran-x-israelus-conflict-ends-by-march-31",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.0245,
+            0.9755
+          ],
+          "volume": 4179971.2000749875,
+          "liquidity": 167978.71943,
+          "endDate": "2026-03-31T00:00:00Z",
+          "clobTokenIds": [
+            "112937628087331697317065233168528083229287804207100901534711974468554098083004",
+            "60020156117014074723286818065417148342963800223162713452237763775488251828713"
+          ],
+          "conditionId": "0x5a200d7d560169d60dc82cd16bb14c16f36f029fdf609dcb92d06a554f9f0fe1",
+          "groupItemTitle": "March 31"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by December 31?",
+          "slug": "iran-x-israelus-conflict-ends-by-december-31-788-548",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.825,
+            0.175
+          ],
+          "volume": 199403.3047109997,
+          "liquidity": 61490.1697,
+          "endDate": "2026-06-30T00:00:00Z",
+          "clobTokenIds": [
+            "30474492153316523915604855839063847245493287455989692695957038531302522868025",
+            "72672649490627178259809292941952979051200271014678303501403336114251236535062"
+          ],
+          "conditionId": "0x23408daff185f6c89d91bd279ce97142c573454277d72ae882a9d9fd1ae79af4",
+          "groupItemTitle": "December 31"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by April 30?",
+          "slug": "iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.345,
+            0.655
+          ],
+          "volume": 654476.8827989988,
+          "liquidity": 49731.8774,
+          "endDate": "2026-04-30T00:00:00Z",
+          "clobTokenIds": [
+            "103971336418419351548990142781195320713490282483637854831265186666012554199721",
+            "96397081496122471303936256377287180706458717603115171106140126963333785784378"
+          ],
+          "conditionId": "0xa6ddb7146f48a12dbf73456d654211b01d7493829932c31b7fe85d82120d338f",
+          "groupItemTitle": "April 30"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by April 15?",
+          "slug": "iran-x-israelus-conflict-ends-by-april-15-618-586-982",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.205,
+            0.795
+          ],
+          "volume": 897386.5622099992,
+          "liquidity": 49246.0966,
+          "endDate": "2026-04-15T00:00:00Z",
+          "clobTokenIds": [
+            "91851388830923641218615793149765322805282194001900444983744404881757241655792",
+            "42541597022580268380579424081239402820400625604765321493406160729090848893639"
+          ],
+          "conditionId": "0x5c2e6aef8af5931e9bfa3750364626d754531d2fada2885d45c356b175962a25",
+          "groupItemTitle": "April 15"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by June 30?",
+          "slug": "iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.645,
+            0.355
+          ],
+          "volume": 799710.9489020001,
+          "liquidity": 63107.772,
+          "endDate": "2026-06-30T00:00:00Z",
+          "clobTokenIds": [
+            "23072428889948871919916997912866343746006774483855187447858489211364943872755",
+            "103799449565939648641249283675043265448904133572321099361316887955408449940585"
+          ],
+          "conditionId": "0x136f5a0c27a62cf9a2e40a4f48425e43d61b9571a53a2529372c0065f3218a73",
+          "groupItemTitle": "June 30"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by May 15?",
+          "slug": "iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.475,
+            0.525
+          ],
+          "volume": 1158606.243919998,
+          "liquidity": 56263.2046,
+          "endDate": "2026-05-15T00:00:00Z",
+          "clobTokenIds": [
+            "19426830997860641827867742428794225516264548638293070052741093336218482490309",
+            "31869663470674113137413574637244458645080626094263106105850314096988098095887"
+          ],
+          "conditionId": "0xd73f60114a0e7169a55082daef1228cb27fa50c939eea22cb0589f6bac6ce5d3",
+          "groupItemTitle": "May 15"
+        },
+        {
+          "question": "Iran x Israel/US conflict ends by April 7?",
+          "slug": "iran-x-israelus-conflict-ends-by-april-7-346",
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcomePrices": [
+            0.075,
+            0.925
+          ],
+          "volume": 75214.39096399995,
+          "liquidity": 53224.6142,
+          "endDate": "2026-04-07T00:00:00Z",
+          "clobTokenIds": [
+            "21743669032210695168079601505378236205866986767926346409604806906483294819314",
+            "111480277258850178537736943682653186709510728707904846394206772928007084779467"
+          ],
+          "conditionId": "0x8183a221622f2d5d2b46da86c80d55a61f43d35829589e03c1efae9d072638c5",
+          "groupItemTitle": "April 7"
+        }
+      ]
+    }
+  ]
+}

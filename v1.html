@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iran War – Prediction Market Report</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background: #0d1117;
+color: #e6edf3;
+padding: 20px;
+max-width: 420px;
+margin: 0 auto;
+-webkit-font-smoothing: antialiased;
+}
+
+.report {
+background: linear-gradient(165deg, #161b22 0%, #0d1117 100%);
+border: 1px solid #30363d;
+border-radius: 16px;
+overflow: hidden;
+}
+
+.header {
+padding: 24px 20px 16px;
+border-bottom: 1px solid #21262d;
+background: linear-gradient(135deg, #1a1e2e 0%, #161b22 100%);
+}
+
+.header .tag {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #f0883e;
+margin-bottom: 8px;
+}
+
+.header h1 {
+font-size: 20px;
+font-weight: 700;
+line-height: 1.3;
+color: #f0f6fc;
+}
+
+.header .subtitle {
+font-size: 12px;
+color: #7d8590;
+margin-top: 6px;
+font-family: ‘DM Mono’, monospace;
+}
+
+.section {
+padding: 16px 20px;
+border-bottom: 1px solid #21262d;
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-title {
+font-size: 11px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: #7d8590;
+margin-bottom: 12px;
+}
+
+.odds-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 0;
+border-bottom: 1px solid rgba(48,54,61,0.5);
+}
+
+.odds-row:last-child { border-bottom: none; }
+
+.odds-label {
+font-size: 14px;
+font-weight: 500;
+color: #e6edf3;
+}
+
+.odds-value {
+font-family: ‘DM Mono’, monospace;
+font-size: 16px;
+font-weight: 700;
+padding: 4px 12px;
+border-radius: 8px;
+min-width: 56px;
+text-align: center;
+}
+
+.odds-high {
+background: rgba(63, 185, 80, 0.15);
+color: #3fb950;
+}
+
+.odds-mid {
+background: rgba(210, 153, 34, 0.15);
+color: #d29922;
+}
+
+.odds-low {
+background: rgba(248, 81, 73, 0.15);
+color: #f85149;
+}
+
+.odds-very-low {
+background: rgba(248, 81, 73, 0.1);
+color: #da3633;
+}
+
+.bullet-list {
+list-style: none;
+padding: 0;
+}
+
+.bullet-list li {
+font-size: 13px;
+line-height: 1.5;
+color: #c9d1d9;
+padding: 6px 0 6px 18px;
+position: relative;
+}
+
+.bullet-list li::before {
+content: ‘→’;
+position: absolute;
+left: 0;
+color: #f0883e;
+font-weight: 600;
+}
+
+.highlight-box {
+background: rgba(240, 136, 62, 0.08);
+border-left: 3px solid #f0883e;
+padding: 12px 14px;
+border-radius: 0 8px 8px 0;
+margin-top: 8px;
+}
+
+.highlight-box p {
+font-size: 13px;
+line-height: 1.5;
+color: #c9d1d9;
+}
+
+.highlight-box strong {
+color: #f0883e;
+}
+
+.divergence {
+display: flex;
+gap: 10px;
+margin-top: 8px;
+}
+
+.divergence-card {
+flex: 1;
+background: #161b22;
+border: 1px solid #30363d;
+border-radius: 10px;
+padding: 12px;
+text-align: center;
+}
+
+.divergence-card .platform {
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #7d8590;
+margin-bottom: 4px;
+}
+
+.divergence-card .value {
+font-family: ‘DM Mono’, monospace;
+font-size: 22px;
+font-weight: 700;
+}
+
+.divergence-card .label {
+font-size: 10px;
+color: #7d8590;
+margin-top: 2px;
+}
+
+.green { color: #3fb950; }
+.red { color: #f85149; }
+
+.footer {
+padding: 14px 20px;
+text-align: center;
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+color: #484f58;
+border-top: 1px solid #21262d;
+}
+
+.volume-badge {
+display: inline-block;
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+color: #7d8590;
+background: rgba(125,133,144,0.1);
+padding: 2px 8px;
+border-radius: 4px;
+margin-left: 6px;
+}
+
+.emoji-label {
+margin-right: 4px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="report">
+
+  <div class="header">
+    <div class="tag">📊 Prediction Market Report</div>
+    <h1>Iran War: What the Markets Say</h1>
+    <div class="subtitle">28 Mar 2026 · Polymarket, Metaculus, Kalshi</div>
+  </div>
+
+  <!-- Ceasefire -->
+
+  <div class="section">
+    <div class="section-title">🕊️ Ceasefire Odds (Polymarket)</div>
+    <div class="odds-row">
+      <span class="odds-label">By March 31</span>
+      <span class="odds-value odds-high">62%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">By April 30</span>
+      <span class="odds-value odds-mid">58%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">By June 30</span>
+      <span class="odds-value odds-mid">61%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">By December 31</span>
+      <span class="odds-value odds-high">76%</span>
+    </div>
+  </div>
+
+  <!-- Escalation -->
+
+  <div class="section">
+    <div class="section-title">⚠️ Escalation Odds (Polymarket)</div>
+    <div class="odds-row">
+      <span class="odds-label">US ground forces enter Iran by Dec</span>
+      <span class="odds-value odds-mid">63%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">US formally declares war by Dec</span>
+      <span class="odds-value odds-very-low">9%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Trump ends operations by June</span>
+      <span class="odds-value odds-high">78%</span>
+    </div>
+  </div>
+
+  <!-- Strait of Hormuz -->
+
+  <div class="section">
+    <div class="section-title">🚢 Strait of Hormuz (Kalshi)</div>
+    <div class="odds-row">
+      <span class="odds-label">Traffic normal by Apr 15</span>
+      <span class="odds-value odds-low">&lt;25%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Traffic normal by June 1</span>
+      <span class="odds-value odds-mid">67%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Traffic normal by July 1</span>
+      <span class="odds-value odds-high">76%</span>
+    </div>
+  </div>
+
+  <!-- Iran Leadership -->
+
+  <div class="section">
+    <div class="section-title">🏛️ Iran Leadership (Polymarket)</div>
+    <div class="odds-row">
+      <span class="odds-label">Leader by end of 2026: Mojtaba Khamenei</span>
+      <span class="odds-value odds-mid">49%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Regime falls before 2027</span>
+      <span class="odds-value odds-mid">—</span>
+    </div>
+  </div>
+
+  <!-- Divergence -->
+
+  <div class="section">
+    <div class="section-title">🔍 Big Divergence: Ceasefire by May</div>
+    <div class="divergence">
+      <div class="divergence-card">
+        <div class="platform">Polymarket</div>
+        <div class="value green">~60%</div>
+        <div class="label">$56M volume</div>
+      </div>
+      <div class="divergence-card">
+        <div class="platform">Metaculus</div>
+        <div class="value red">8%</div>
+        <div class="label">343 forecasters</div>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top: 12px;">
+      <p>Metaculus forecasters (no money at stake) are <strong>far more pessimistic</strong> than Polymarket traders. Key reasons cited: existential war for Iran's leadership, Pentagon preparing for prolonged conflict, and the Hormuz standoff.</p>
+    </div>
+  </div>
+
+  <!-- Wall St -->
+
+  <div class="section">
+    <div class="section-title">💼 Wall Street View (Capital Alpha)</div>
+    <div class="odds-row">
+      <span class="odds-label">War ends by May</span>
+      <span class="odds-value odds-low">25%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Settles by Autumn 2026</span>
+      <span class="odds-value odds-mid">45%</span>
+    </div>
+    <div class="odds-row">
+      <span class="odds-label">Extends into 2027</span>
+      <span class="odds-value odds-low">35%</span>
+    </div>
+  </div>
+
+  <!-- Key Context -->
+
+  <div class="section">
+    <div class="section-title">📌 Key Context</div>
+    <ul class="bullet-list">
+      <li>Iran rejected US 15-point ceasefire plan, demanding reparations &amp; Hormuz sovereignty</li>
+      <li>Pentagon developing ground troop options inc. Kharg Island &amp; Larak Island seizure</li>
+      <li>82nd Airborne deploying 1,000+ troops to the region</li>
+      <li>Israel threatening to "escalate and expand" attacks</li>
+      <li>Polymarket Iran markets plagued by insider trading concerns — multiple traders made $500K+ on pre-strike bets</li>
+      <li>Kuwait airport hit by Iranian strike this week — conflict spreading to Gulf states</li>
+    </ul>
+  </div>
+
+  <!-- Caveat -->
+
+  <div class="section">
+    <div class="highlight-box">
+      <p>⚠️ <strong>Caveat:</strong> Polymarket's Iran odds are under heavy scrutiny for possible insider trading. Metaculus &amp; Wall Street analysts paint a much longer timeline. Take all figures with appropriate scepticism.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Sources: Polymarket · Metaculus · Kalshi · Capital Alpha Partners<br>
+    Compiled 28 Mar 2026
+  </div>
+
+</div>
+
+</body>
+</html>
