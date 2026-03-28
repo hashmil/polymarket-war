@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { getLatest, getAnalysis } from "../data/loader.ts";
+import { getLatest, getAnalysis, getDeltas } from "../data/loader.ts";
 import { OddsSection } from "../components/OddsSection.tsx";
 import { HighlightBox } from "../components/HighlightBox.tsx";
 import { DivergenceCard } from "../components/DivergenceCard.tsx";
@@ -9,33 +9,38 @@ import type { OddsItem } from "../types.ts";
 
 function extractOdds(
   events: ReturnType<typeof getLatest>["events"],
-  eventSlug: string
+  eventSlug: string,
+  deltas: Map<string, number>
 ): OddsItem[] {
   const event = events.find((e) => e.slug === eventSlug);
   if (!event) return [];
   return event.markets.map((m) => ({
     label: m.groupItemTitle || m.question,
     value: yesPct(m),
+    delta: deltas.get(m.conditionId),
   }));
 }
 
 export function ReportView() {
   const data = getLatest();
   const analysis = getAnalysis();
+  const deltas = getDeltas();
   const fetchDate = new Date(data.fetchedAt).toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",
   });
 
-  const ceasefireOdds = extractOdds(data.events, "us-x-iran-ceasefire-by");
+  const ceasefireOdds = extractOdds(data.events, "us-x-iran-ceasefire-by", deltas);
   const militaryOdds = extractOdds(
     data.events,
-    "military-action-against-iran-ends-on"
+    "military-action-against-iran-ends-on",
+    deltas
   );
   const conflictOdds = extractOdds(
     data.events,
-    "iran-x-israelus-conflict-ends-by"
+    "iran-x-israelus-conflict-ends-by",
+    deltas
   );
 
   const mainSlugs = new Set([
@@ -98,6 +103,7 @@ export function ReportView() {
             const items = event.markets.map((m) => ({
               label: m.groupItemTitle || m.question,
               value: yesPct(m),
+              delta: deltas.get(m.conditionId),
             }));
             return (
               <OddsSection key={event.slug} title={event.title} items={items} />

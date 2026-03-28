@@ -25,6 +25,7 @@ export interface Snapshot {
 export interface OddsItem {
   label: string;
   value: number; // 0-100
+  delta?: number; // change from previous snapshot
 }
 
 export interface Analysis {

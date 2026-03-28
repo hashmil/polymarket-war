@@ -15,7 +15,7 @@ export function OddsSection({
       </div>
       <div className="stagger-children">
         {items.map((item) => (
-          <OddsRow key={item.label} label={item.label} value={item.value} />
+          <OddsRow key={item.label} label={item.label} value={item.value} delta={item.delta} />
         ))}
       </div>
     </div>

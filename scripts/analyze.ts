@@ -66,14 +66,19 @@ async function main() {
 Here are the current Polymarket prediction market odds (fetched just now):
 ${oddsText}
 
-Use web search to find the latest Iran conflict news and developments from the past 48 hours. Search for terms like "Iran war", "Iran ceasefire", "Iran US conflict", "Polymarket Iran".
+RESEARCH STEPS — do all of these using web search:
+1. Search for the latest Iran conflict news from the past 48 hours: "Iran war latest", "Iran ceasefire negotiations", "Iran US conflict update", "Iran Israel strikes"
+2. Search for other prediction market views: "Metaculus Iran ceasefire", "Kalshi Iran", "PredictIt Iran" — compare their odds to Polymarket where available
+3. Search for expert/analyst commentary: "Iran conflict analysis", "Iran war outlook analysts"
+4. Search for related geopolitical developments that could affect the conflict: oil prices, Strait of Hormuz, regional actors (Saudi Arabia, Pakistan, Lebanon, Hezbollah), sanctions, diplomatic channels
 
 Write 4-6 concise bullet points. Each bullet should be 1-2 sentences. Cover:
 - What the current odds imply about the conflict trajectory and timeline
 - Key recent news developments driving the market
 - Any notable or surprising market movements
-- Cross-reference with other sources if possible (Metaculus, analyst views, news)
-- Brief outlook
+- Cross-reference with OTHER prediction markets (Metaculus, Kalshi, etc.) — note where they agree or diverge from Polymarket
+- Relevant analyst or expert views that add context beyond market pricing
+- Brief outlook with specific catalysts to watch
 
 CRITICAL FORMAT RULES:
 - Start each bullet with "• " (bullet character + space)
